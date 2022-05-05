@@ -1,0 +1,1 @@
+const e={key:"v-5b50483c",path:"/admin/04.html",title:"\u5982\u4F55\u5347\u7EA7",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u4E00\u4E2A\u5C0F\u6280\u5DE7",slug:"\u4E00\u4E2A\u5C0F\u6280\u5DE7",children:[]},{level:2,title:"\u91CD\u8981\u63D0\u793A",slug:"\u91CD\u8981\u63D0\u793A",children:[]}],filePathRelative:"admin/04.md"};export{e as data};

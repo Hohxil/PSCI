@@ -1,0 +1,27 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Report/SaleMonthByBizuserForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<if condition='$enableLodop eq 1'>
+  <!-- 打印 -->
+  <script src="{$uri}Public/Lodop/LodopFuncs.js?dt={$dtFlag}" type="text/javascript"></script>
+</if>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    app.add(PCL.create("PSI.Report.SaleMonthByBizuserForm"));
+  });
+</script>

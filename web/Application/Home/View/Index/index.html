@@ -1,0 +1,29 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Home/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      showCopyright: true,
+      showRecent: true,
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    app.add(PCL.create("PSI.Home.MainForm", {
+      pSale: "{$pSale}",
+      pInventory: "{$pInventory}",
+      pPurchase: "{$pPurchase}",
+      pMoney: "{$pMoney}",
+      productionName: "{$productionName}"
+    }));
+  });
+</script>

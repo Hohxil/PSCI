@@ -1,0 +1,47 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/PurchaseRej/PRMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/PurchaseRej/PREditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/PurchaseRej/PRSelectPWBillForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/User/UserField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<if condition='$enableLodop eq 1'>
+  <script src="{$uri}Public/Lodop/LodopFuncs.js?dt={$dtFlag}" type="text/javascript"></script>
+</if>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    const permission = {
+      add: "{$pAdd}",
+      edit: "{$pEdit}",
+      del: "{$pDelete}",
+      commit: "{$pCommit}",
+      genPDF: "{$pGenPDF}",
+      print: "{$pPrint}"
+    };
+
+    app.add(PCL.create("PSI.PurchaseRej.PRMainForm", {
+      permission
+    }));
+  });
+</script>

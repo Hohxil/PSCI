@@ -1,0 +1,1 @@
+const e={key:"v-90d106ba",path:"/dev/lcap/08-07.html",title:"FId\u4E00\u89C8",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u7F16\u8F91fid\u7684\u7F16\u7801\u548C\u52A9\u8BB0\u7801",slug:"\u7F16\u8F91fid\u7684\u7F16\u7801\u548C\u52A9\u8BB0\u7801",children:[]}],filePathRelative:"dev/lcap/08-07.md"};export{e as data};

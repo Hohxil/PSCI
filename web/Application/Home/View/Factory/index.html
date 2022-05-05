@@ -1,0 +1,35 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Factory/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Factory/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Factory/FactoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    const permission = {
+      addCategory: "{$pAddCategory}",
+      editCategory: "{$pEditCategory}",
+      deleteCategory: "{$pDeleteCategory}",
+      add: "{$pAdd}",
+      edit: "{$pEdit}",
+      del: "{$pDelete}"
+    };
+
+    app.add(PCL.create("PSI.Factory.MainForm", {
+      permission
+    }));
+  });
+</script>

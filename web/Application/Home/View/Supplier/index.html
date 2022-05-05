@@ -1,0 +1,37 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Supplier/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<!-- 关联商品 -->
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsCategoryField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/GRCategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/GRGoodsEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    app.add(PCL.create("PSI.Supplier.MainForm", {
+      pAddCategory: "{$pAddCategory}",
+      pEditCategory: "{$pEditCategory}",
+      pDeleteCategory: "{$pDeleteCategory}",
+      pAddSupplier: "{$pAddSupplier}",
+      pEditSupplier: "{$pEditSupplier}",
+      pDeleteSupplier: "{$pDeleteSupplier}"
+    }));
+  });
+</script>

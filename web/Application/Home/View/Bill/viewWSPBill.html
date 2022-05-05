@@ -1,0 +1,17 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Bill/WSPViewForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+  PCL.onReady(() => {
+    const form = PCL.create("PSI.Bill.WSPViewForm", {
+      ref: "{$ref}"
+    });
+    form.show();
+  });
+</script>

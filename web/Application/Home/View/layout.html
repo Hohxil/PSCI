@@ -1,0 +1,60 @@
+{/* 
+ * @author 艾格林门信息服务（大连）有限公司
+ * @copyright 2015 - present
+ * @license GPL v3
+ */}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{$title} - {$productionName}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{$uri}Public/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <script src="{$uri}Public/Scripts/PSI/UX/JSPatch.js?dt={$dtFlag}" type="text/javascript"></script>
+
+  <script src="{$uri}Public/PCL/pcl.js" type="text/javascript"></script>
+  <script src="{$uri}Public/PCL/ext-lang-zh_CN.js" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/MsgBox.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/Const.js?dt={$dtFlag}" type="text/javascript"></script>
+
+  <link href="{$uri}Public/PCL/resources/pcl.css" rel="stylesheet" type="text/css" />
+  <link href="{$uri}Public/Content/Site.css?dt={$dtFlag}" rel="stylesheet" type="text/css" />
+  <link href="{$uri}Public/Content/icons.css?dt={$dtFlag}" rel="stylesheet" type="text/css" />
+
+  <script src="{$uri}Public/Scripts/PSI/App.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/BaseMainExForm.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/BaseMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/BaseDialogForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+  <script src="{$uri}Public/Scripts/PSI/UX/PickerOverride.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/UX/NumberOverride.js?dt={$dtFlag}" type="text/javascript"></script>
+
+  <script src="{$uri}Public/Scripts/PSI/MainMenu/ShortcutField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+  {// 新版AFX }
+  <script src="{$uri}Public/Scripts/PSI/AFX/Mix/Common.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/Form/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/Form/EditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/MessageBox/ShowInfoForm.js?dt={$dtFlag}" type="text/javascript"></script>
+  <script src="{$uri}Public/Scripts/PSI/AFX/MessageBox/ConfirmForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+</head>
+
+<body style="background-image:url({$uri}Public/Images/background.png)">
+  <script>
+    PSI.Const.BASE_URL = "{$uri}";
+
+    PCL.tip.QuickTipManager.init();
+
+    PSI.Const.MOT = "{$mot}";
+    PSI.Const.GC_DEC_NUMBER = parseInt("{$goodsCountDecNumber}");
+    PSI.Const.ENABLE_LODOP = "{$enableLodop}";
+    PSI.Const.PROD_NAME = "{$productionName}";
+  </script>
+
+  {__CONTENT__}
+</body>
+
+</html>

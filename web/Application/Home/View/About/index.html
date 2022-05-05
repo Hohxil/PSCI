@@ -1,0 +1,20 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/About/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+  PCL.onReady(() => {
+    const form = PCL.create("PSI.About.MainForm", {
+      productionName: "{$productionName}",
+      phpVersion: "{$phpVersion}",
+      mySQLVersion: "{$mySQLVersion}",
+      PSIDBVersion: "{$PSIDBVersion}",
+      PSIDBUpdateDT: "{$PSIDBUpdateDT}"
+    });
+    form.show();
+  });
+</script>

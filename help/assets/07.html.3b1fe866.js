@@ -1,0 +1,1 @@
+const e={key:"v-606ed219",path:"/admin/07.html",title:"Lodop\u6253\u5370",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6253\u5370\u9884\u89C8",slug:"\u6253\u5370\u9884\u89C8",children:[]},{level:2,title:"\u76F4\u63A5\u6253\u5370",slug:"\u76F4\u63A5\u6253\u5370",children:[]}],filePathRelative:"admin/07.md"};export{e as data};

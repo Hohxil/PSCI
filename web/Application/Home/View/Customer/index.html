@@ -1,0 +1,34 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Customer/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Customer/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Customer/CustomerEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Customer/CustomerImportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    app.add(PCL.create("PSI.Customer.MainForm", {
+      pAddCategory: "{$pAddCategory}",
+      pEditCategory: "{$pEditCategory}",
+      pDeleteCategory: "{$pDeleteCategory}",
+      pAddCustomer: "{$pAddCustomer}",
+      pEditCustomer: "{$pEditCustomer}",
+      pDeleteCustomer: "{$pDeleteCustomer}",
+      pImportCustomer: "{$pImportCustomer}"
+    }));
+  });
+</script>

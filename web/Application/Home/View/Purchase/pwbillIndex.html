@@ -1,0 +1,58 @@
+{/*
+* @author 艾格林门信息服务（大连）有限公司
+* @copyright 2015 - present
+* @license GPL v3
+*/}
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/User/UserField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsWithPurchasePriceField.js?dt={$dtFlag}"
+  type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsCategoryField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsBrandField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Goods/GoodsUnitField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/Purchase/PWMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<!-- GoodsPrice会mix到PWEditForm，所以需要放在其前面引用 -->
+<script src="{$uri}Public/Scripts/PSI/Mix/GoodsPrice.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Purchase/PWEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/PSI/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<if condition='$enableLodop eq 1'>
+  <script src="{$uri}Public/Lodop/LodopFuncs.js?dt={$dtFlag}" type="text/javascript"></script>
+</if>
+
+<script>
+  PCL.onReady(() => {
+    const app = PCL.create("PSI.App", {
+      userName: "{$loginUserName}",
+      productionName: "{$productionName}",
+      appHeaderInfo: {
+        title: "{$title}"
+      }
+    });
+
+    const permission = {
+      add: "{$pAdd}",
+      edit: "{$pEdit}",
+      del: "{$pDelete}",
+      commit: "{$pCommit}",
+      genPDF: "{$pGenPDF}",
+      showAddGoodsButton: "{$showAddGoodsButton}",
+      viewPrice: "{$pViewPrice}",
+      print: "{$pPrint}"
+    };
+    app.add(PCL.create("PSI.Purchase.PWMainForm", {
+      permission
+    }));
+  });
+</script>

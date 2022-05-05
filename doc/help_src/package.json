@@ -1,0 +1,15 @@
+{
+  "name": "psi-help",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "艾格林门信息服务（大连）有限公司",
+  "license": "GPL v3",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.32"
+  }
+}
